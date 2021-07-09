@@ -1,0 +1,334 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style type="text/css">
+          h1{
+        text-decoration:underline;
+
+    }
+    body{
+    	background-image:  linear-gradient(lightskyblue,lightblue,lavender,aliceblue,floralwhite,orchid, fuchsia);
+    }
+    #search{
+      position: absolute;
+      padding-top: 0px;
+     left: -25px;
+
+
+    }
+    .link{
+          border-bottom: solid green 1px;
+    color: #310505;
+    text-decoration: unset;
+    
+    }
+    #top{
+      width:100px;
+    }
+  
+    .shadow{
+    background-color: #ecdbdb00;  
+    }
+    #dips{
+        border-radius:20px;
+        height: 40px;
+
+    }
+    #bgc{
+      background-color:#fdfdf1;
+    }
+    #dip{
+        display:none;
+    }
+    #hide{
+         border-radius: 25px;
+    }
+   
+    h3, h4{
+      text-align: center;
+    }
+      .hover:hover{
+        font-weight: bold;
+        color:white;
+        border-radius: 12px;
+        border:2px  solid gold;
+        background-color: lightskyblue;
+      }
+      p{ 
+        border:solid;
+        border-style:offset; 
+      }
+    
+      .shadow-lg{
+        font-weight: bold;
+        background-color:ghostwhite;
+        
+      } 
+      #color{
+        background-color:#CFF3AB;
+        border-bottom-left-radius:35px;
+        border-bottom-right-radius:35px; 
+        
+      }
+      #right{
+        position: absolute;
+        right:15px;
+        top:29%;
+      }
+      #img{
+      position: absolute;
+   
+      right: 0px;
+      width: 101px;
+      }
+      #sp{
+        width:100%;
+        height:40px;
+        outline-color: #28ef3769;
+        border-radius:15px;
+      }
+      
+      tr{
+        border-radius: 10px;
+      }
+      caption{
+      caption-side: top;
+     }
+
+    </style>
+    <title>Janapada Vaidya Nidhi</title>
+    <script type="text/javascript">
+    	    function showed() {
+   document.getElementById('prac').style.display="none";
+   document.getElementById('dip').style.display="block";
+ } 
+    </script>
+  </head>
+  
+<body>
+<nav class="navbar navbar-light navbar-expand-sm " id='color'>
+  <a class="navbar-brand" href="#"> Janapada Vaidya Nidhi</a>
+  <button class="navbar-toggler" type="button" data-toggle='collapse' data-target='#navbar'>
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <ul class="navbar-nav ">
+    <form action="search.php" method="POST" class="form-inline">
+      <div class="form-group px-5 row">  
+        <label>Search Practioners :<input type="text" class="form-control form-control" name="phn"placeholder="Enter practioner name" id="round"autocomplete="off"> </label>  
+      </div>
+    </form>
+    <div class="collapse navbar-collapse" id='navbar'>
+      <li class="nav-item px-md-3"><a class="nav-link hover" id="hover">Display Practioner</a></li>
+      <li class="nav-item px-md-3"><a href="sdis.php" class="nav-link hover"  role="button" aria-pressed="true">Search Disease</a></li>
+      <li class="nav-item px-md-3"><a href="insert.html"  class="nav-link hover" role="button" aria-pressed="true">Insert Flokelore</a></li>
+      <li class="nav-item px-md-3"><a href="Aboutus.php"  class="nav-link hover" role="button" aria-pressed="true">About Us</a></li>
+    </div>
+  </ul>
+</nav>
+<div id="search" class="row offset-4"></div>
+<a href="main.html"><img src="SDMPCA.jpg" id='top'></a>
+<a href="Aboutus.html" >
+  <img src="sdm.png"  align='top right' id='img'> 
+</a>
+
+<div class="container" id="dip">
+  <div class= "row">
+    <div class="col col-md-12 col-sm-1 justify-content-center">
+      <h4>Plant Search</h4>
+      <label>Scientific Name <input class="btn btn-success"type="radio" name="search" value="Scientific_name" checked=""></label>
+      <label>Plant Name<input class="btn btn-success" type="radio" name="search" value="Plant_name"></label>
+      <label>Vernacular Name <input type="radio" name="search" class="btn btn-success " value="Vernacular_name"> </label>
+      <label>Family Description <input type="radio" name="search" class="btn btn-success" value="Family_description"></label>
+      <label>Disease Name <input type="radio" name="search" class="btn btn-success btn-lg" value="D_name"></label>
+      <label>District<input type="radio" name="search" class="btn btn-success btn-lg" value="Dist"></label>
+      <input type="text" id="sp" name="">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+  	 <div class="shadow-lg">
+      <h3>Plant Details</h3>
+      <div class="table-responsive">
+          <table class="table  table-hover table-striped table-bordered ">
+            <thead class="thead-light">
+              <tr >
+                <th>
+                  Scientific Name
+                </th>
+                <th>
+                  Plant Name
+                </th>
+                <th>
+                  Vernacular Name
+                </th>
+                <th>
+                  Family Description
+                </th>
+                <th>
+                  Disease Name
+                </th>
+                <th>
+                 Practitioner
+                </th>
+                <th>
+                 District
+                </th>
+              </tr>
+              </thead>    
+              <tbody id="res" >
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+  <div id="prac">
+  <div class="container" >
+  	<div class="shadow-lg">
+      <div class="row justify-content-center">
+        <div class="col align-items-center">
+          <div class="table-responsive">
+            <table class="table table-bordered table-hover" id="pagep">
+              <thead class="thead-dark">
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <th>
+                    Phone Number
+                  </th>
+                  <th>
+                    Address
+                  </th>
+                  <th>
+                    District
+                  </th>
+                  <th>
+                    State
+                  </th>
+                 
+                </tr>
+              </thead>
+              <tbody id="resp">  
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-success " id="show" onclick="showed()">Display plants </button>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+	 $("#prac").hide();
+          $('#dip').show();
+          var Display='Display';
+          $.ajax({
+            url:"plantsearch.php",
+          method:"POST",
+          data:{click:"Display",dname:""},
+          success:function(data){
+            var datas = JSON.parse(data);
+            datas.forEach(function(dt){
+              $('#res').append("<tr>"+
+                "<td>"+dt.Scientific_name+"</td>"+
+                "<td>"+dt.Plant_name+"</td>"+
+                "<td>"+dt.Vernacular_name+"</td>"+
+                "<td>"+dt.Family_description+"</td>"+
+                "<td><a href='showdis.php?tid="+dt.tid+"&pid="+dt.pid+"&home=0'>"+dt.D_name+"</a></td>"+
+                "<td><a href='showp.php?pid="+dt.pid+"'>"+dt.name+"</a></td>"+
+                "<td>"+dt.dist+"</td>"
+                )
+            })
+          },
+          error: function(data){
+            console.log("request failed");
+        }
+    })
+    $('#round').on('keyup',function(){
+          $('#search').empty();
+          document.getElementById('search').write=" ";
+          $.ajax({
+          url:"search.php",
+          method:"POST",
+          type:"json",
+          data:{phn:$('#round').val()},
+          success:function(data){
+            $('#search').append(data);
+          }
+        })
+      });
+
+      $('#sp').on('keyup',function(){
+         var search = $("input[name='search']:checked").val();
+        $('#res').empty();
+        document.getElementById('res').write=" ";
+        $('#res').empty();
+        $('#dip').show();
+        $.ajax({
+          url:"plantsearch.php",
+          method:"POST",
+          type:"json",
+          data:{search:search,dname:$('#sp').val(),click:"search"},
+          success:function(data){
+  			 var datas = JSON.parse(data);
+         console.log(data);
+             for (let i =0 ; i < datas.length; i++) {
+              var pid=datas[i]['pid'];
+            $('#res').append("<tr>"+
+                "<td>"+datas[i]['Scientific_name']+"</td>"+
+                "<td>"+datas[i]['Plant_name']+"</td>"+
+                "<td>"+datas[i]['Vernacular_name']+"</td>"+
+                "<td>"+datas[i]['Family_description']+"</td>"+
+                "<td><a href='showdis.php?tid="+datas[i]['tid']+"&pid="+datas[i]['pid']+"&home=0'>"+datas[i]['D_name']+"</a></td>"+
+                "<td><a href='showp.php?pid="+pid+"'>"+datas[i]['name']+"</a></td>"+
+                "<td>"+datas[i]['dist']+"</td>")
+
+            }
+            
+           }
+        })
+
+      });
+ $('#hover').on('click',function(){
+          $('#dip').hide();
+          $('#prac').show();
+          $.ajax({ 
+            url:"practioner.php",
+            method:"POST",
+            type:"json",
+            data:{"show":"pract"},
+            success:function(data){
+              
+              var datas = JSON.parse(data);
+              var phone;
+              datas.forEach(function(dt){
+                  phone=dt.phone;
+                $('#resp').append(
+                  "<tr><td><a href='showp.php?pid="+dt.pid+"'>"+dt.name+"</a></td>"+
+                  "<td>"+phone+"</td>"+
+                  "<td>"+dt.adds+"</td>"+
+                  "<td>"+dt.dist+"</td>"+
+                  "<td>"+dt.state+"</td>")                
+              })
+            }
+          })
+        });
+     });                  
+     
+   </script>
+  </body>
+</html>

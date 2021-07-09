@@ -1,0 +1,63 @@
+    h1{
+        text-decoration:underline;
+
+    }
+    html{
+      background-image: linear-gradient(snow,seashell,mintcream,lightyellow,cornsilk,aliceblue);
+    }
+    #search{
+      width: 15%;
+    }
+    .link{
+          border-bottom: solid green 1px;
+    color: #310505;
+    text-decoration: unset;
+    
+    }
+    .shadow{
+    background-color: #ecdbdb00;  
+    }
+    #dips{
+        border-radius:20px;
+        height: 40px;
+
+    }
+    #bgc{
+      background-color:#E9F1E7;
+    }
+    #dip{
+        display:none;
+    }
+    #hide{
+         border-radius: 25px;
+    }
+   
+    h3, h4{
+      text-align: center;
+    }
+      .hover:hover{
+        font-weight: bold;
+        color:#498f4a;
+        background-color: white;
+      }
+      p{ 
+        border:solid;
+        border-style:offset; 
+      }
+    
+      .shadow-lg{
+        font-weight: bold;
+      }
+
+      #sp{
+        width:100%;
+        height:40px;
+        outline-color: #28ef3769;
+        border-radius:15px;
+      }
+      tr{
+        border-radius: 10px;
+      }
+      caption{
+      caption-side: top;
+     }

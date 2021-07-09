@@ -1,0 +1,74 @@
+.grid-container {
+  grid-row-gap: 50px;
+}
+#top{
+	
+	color: black;
+}
+
+#research{
+	
+	width: 33%;
+margin-top: -3%;
+
+margin-left: 30%
+}
+h3{
+	text-align: center;
+	color: white;
+}
+a, select{
+	outline-color: #b5f571;
+	border-radius: 10px; 
+}
+a{
+	color: black;
+	text-decoration: unset;
+
+	
+}
+a:hover{
+	color:blue;
+}
+ body{
+	    background-color: darkcyan;
+	    background-image: repeating-linear-gradient(honeydew,lavenderblush,mistyrose,oldlace,papayawhip);
+}
+
+.back{
+
+	border-color: solid black;
+	
+	background-color: #abd1fb;
+	border-radius: 45px;
+
+			background-image: url("main.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		color: whitesmoke;
+}
+
+
+nav{
+	background-color: ivory;
+}
+#width{
+	padding-left: 30px;
+	padding-right: 30px
+
+}
+
+#sm{
+padding-left: 10px;
+padding-right: 10px;
+margin-left:  10px;
+margin-right: 10px; 
+}
+
+a{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+}

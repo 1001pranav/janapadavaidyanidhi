@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Insert Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <style type="text/css">
+    #dis, #ints, #pro{
+      border-radius: 15px; 
+      background-image: none;
+      background-color: lavenderblush;
+      color: black;
+      margin-left: 43%;
+    }
+    p{
+      border-bottom: 2px solid black;
+    }
+    li{
+      list-style: unset;
+    }
+    #hide,#show{
+      display:none;
+    }
+    </style>
+    <link rel="stylesheet" href="insert.css" type="text/css" />
+
+<script type="text/javascript">
+  function seti(name ) {
+
+    document.getElementById('inter').value=name.value;
+    document.getElementById("ints").style.display="none";
+  }
+  function setds(name){
+    var dis=name.value.split(" ");
+    document.getElementById('dist').value=dis[0];
+    document.getElementById('state').value=dis[1];
+    document.getElementById("dis").style.display="none";
+  }
+  function setpr(name ) {
+
+    document.getElementById('prof').value=name.value;
+    document.getElementById("pro").style.display="none";
+  }
+</script>
+</head>
+<body>
+
+  
+    <div class="container">
+      <header id="top">
+      <div class="row form-group">
+    <h5>Searching Practioner Data</h5>
+    <form method="POST" action="insearch.php">
+      <div class="col">
+        <div class="">
+      <label>Name or Phone Number<input type="text" name="search" placeholder="Enter Name or Phone Number Recorded Practioner" size="50" id="insearch" height="30" class="form-control" autocomplete="off"></label>
+    </div>
+          <div id="search" >
+    
+    </div>
+    </div>
+    <div class="col">
+      <input type="submit"  class="btn-success" name="submit" value="Search" > 
+      </div>     
+    </form>
+
+
+  </div>
+  
+  </header>    
+  </div>
+  <div class="container shadow-lg justify-content-center back">
+  <form method="POST" action="insert.php" enctype="multipart/form-data">
+  <main>
+
+  
+
+    
+  
+    <h3>Enter New Practioner Data</h3><br/>
+    <div class="row justify-content-center form-group">
+      <div class="col-1 offset-3">
+        Image of the Practioner
+      </div>
+      <div class="col col-3">
+        <input type="file" name="photo" class='form-control' value="" /> 
+
+
+      </div>
+<sub><strong>Note:</strong>Only .jpg, .jpeg, .png formats allowed to a max size of 2MB.</sub>
+      
+    </div>
+    <div class="row justify-content-center form-group my-2">
+      <div class="col col-1 ">
+        Name :
+      </div>
+      <div class="col col-3">
+        <select name="resp" class="form-control">
+          <option value="Smt">Smt</option>
+          <option value="Sri">Sri</option>
+          <option value="Dr">Dr</option>
+        </select>
+        <br>
+        <input type="text" class='form-control' id="width" class="height" name="name" placeholder="Name Of The Practioner">
+      </div>
+
+    </div>
+
+    <div class="row justify-content-center form-group  my-2"> 
+      <div class="col col-1">
+        Gender :
+      </div>
+      <div class="col col-1">
+        <select class="form-control" name="gender">
+                <option name="gender" class="btn btn-outline-info" value="Male">Male </option>
+                <option name="gender" class="btn btn-outline-info" value="Female">Female </option>
+              </select>
+        
+      </div>
+      <div class="col col-1">
+        Age :
+      </div>
+      <div class="col-1 ">
+        <input  type="Number" class="form-control"  name="age" min="0" max='100'>
+        
+      </div>
+    </div>  
+    <div class="row justify-content-center form-group  my-2">
+      <div class="col col-1 ">
+        Phone Number 
+      </div>
+      <div class="col col-3">
+        <input type="tel" name="phone" class="form-control"  id="width" placeholder="Must not added Previously">
+      </div>
+      
+      
+   
+    
+    </div>
+    <div class="row justify-content-center form-group  my-2">
+      <div class="col col-1 ">
+        Address :
+      </div>
+      <div class="col col-3">
+        <input type="text" id="width"  class="form-control" name="add">
+        </div>
+    </div>
+    <div class="row justify-content-center form-group  my-2">
+      <div class="col col-1">
+        District :
+      </div>
+      <div class="col col-3">
+        <input type="text" id="dist" class="form-control" autocomplete="off" name="dis">
+      </div>
+
+    </div>
+
+    <div class="row ">
+      <div class="col  col-2 offset-5" id="dis"></div>
+    </div>
+    <div class="row justify-content-center form-group   my-2">
+      <div class="col col-1">
+          State :
+        </div>
+          <div class="col col-3">
+          <input type="text" class="form-control" id="state" name="state" >
+        </div>
+    </div>      
+    <div class="row justify-content-center form-group  my-2">
+      <div class="col col-1">
+        Education 
+      </div>
+      <div class="col col-3">
+        <select class="btn btn-info "  class="form-control" name="edu">
+            <option class="btn btn-primary "  value="None">Select (None)</option>
+            <option class="btn btn-primary " value="Primary">Primary</option>
+            <option class="btn btn-primary " value="Secondary">Secondary</option>
+            <option class="btn btn-primary " value="Degree">Degree</option>
+        </select>
+
+      </div>
+    </div>
+    <div class="row justify-content-center form-group  my-2">
+      <div class="col col-1">
+        Profession  
+      </div>
+
+      <div  class="col col-3">
+        <input type="text" class="form-control" autocomplete="off" id="prof" name="prof">
+      </div>
+    </div>
+     <div class="row">
+      <div class="col  col-2 offset-5" id="pro"></div>
+    </div>
+    <div class="row justify-content-center form-group  my-2">
+      <div class="col col-1">
+        Tutor
+      </div>
+      <div class="col col-3">
+        <input  type="text" class="form-control" placeholder="Name of Tutor" name="tutor" size="20">
+        <input  type="text" class="form-control" name="rel" placeholder="Relation" size="15">
+      </div>
+    </div>
+    <div class="row justify-content-center form-group  my-2">
+      <div class="col col-1">
+        Experience 
+      </div>
+      <div class="col col-3">
+        <input type="number" class="form-control" name="exp" min=0 max=100>
+      </div>
+    </div>
+    <div class="row justify-content-center form-group  my-2">
+      <div class="col col-1">
+          Name of the Interviewer 
+        </div>
+
+        <div class="col col-3">
+          <input  type="text" class="form-control" autocomplete="off" id="inter" name="inter" >
+      </div>
+    </div>
+     <div class="row">
+      <div class="col  col-2 offset-5" id="ints"></div>
+    </div>
+      <div class="row justify-content-center form-group  my-2">
+        <div class="col col-1">
+          Date of Interviewer  
+        </div>
+        <div class="col col-3">
+          <input  class="form-control" type="date" name="doi">
+        </div>
+      </div>
+      </div>
+
+
+  </main>
+  <footer>    
+    <nav class="navbar ">
+      <a href="main.html" class="btn-primary">Home</a>
+      <input type="Submit" align="center" class="btn-success" name="submit" value="Submit">
+      <input type="Reset" class="btn-danger" name="">
+      
+      </nav>
+  </footer>    
+
+    </form>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    
+    $('#insearch').on('keyup',function(){
+      $('#search').empty();
+      $.ajax({
+        url:'insearch.php',
+        method:'POST',
+        data:{search:$('#insearch').val()},
+      success:function(data){
+            $('#search').append(data);
+          }
+      })
+    });
+    $('#dist').on("keyup",function(){
+     $('#ints').empty();
+      $('#pro').empty();
+      $('#dis').empty();
+      $.ajax({
+        url:"suggest.php",
+        method:'POST',
+        data:{
+          type:"district",
+          value:$('#dist').val()
+        },
+          success:function(data){
+            $('#dis').append(data);
+          }
+        
+      })
+    });
+    $('#prof').on("keyup",function(){
+      $('#ints').empty();
+      $('#pro').empty();
+      $('#dis').empty();
+      $.ajax({
+      url:"suggest.php",
+      method:"POST",
+      data:{type:"prof",
+            value:$("#prof").val()},
+            success:function(data){
+              $('#pro').append(data);
+            }
+      })
+    });
+        $('#inter').on("keyup",function(){
+      $('#ints').empty();
+      $('#pro').empty();
+      $('#dis').empty();
+      $.ajax({
+      url:"suggest.php",
+      method:"POST",
+      data:{type:"int",
+            value:$("#inter").val()},
+            success:function(data){
+              $('#ints').append(data);
+            }
+      })
+    });
+       
+  });
+</script>
+  </main>
+</body>
+</html>
+
